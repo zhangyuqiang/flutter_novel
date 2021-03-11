@@ -234,7 +234,7 @@ class _ScrollablePositionedListState extends State<ScrollablePositionedList>
         },
         child: Builder(builder: (context) {
           frontScrollController =
-              (context.ancestorWidgetOfExactType(PrimaryScrollController)
+              (context.findAncestorWidgetOfExactType<PrimaryScrollController>()
                       as PrimaryScrollController)
                   .controller;
           return AnimatedBuilder(
